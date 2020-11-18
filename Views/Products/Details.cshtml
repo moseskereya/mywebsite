@@ -1,0 +1,24 @@
+﻿@model Restaurant.Models.Product
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h4>Product Details</h4>
+<h4>Product Name : @Model.ProductName</h4>
+<br />
+<br />
+<div class="row">
+    <div class="col-md-6 col-md-6 col-lg-4">
+        <img src="/Images/Thumbs/@Model.ImagePath" alt="Single_product_Image" class="img-thumbnail" />
+    </div>
+    <br />
+    <div class="col-md-6 col-md-6 col-lg-6">
+        <p>@Model.Description</p>
+        <div class="footer-content">
+            <span>@Model.UnitPrice TSH</span>
+            <br />
+            <a asp-action="Index" asp-controller="Products"> Back </a>
+        </div>
+    </div>
+</div>
